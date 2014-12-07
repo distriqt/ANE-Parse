@@ -1,5 +1,11 @@
 
 
+###### 2014.12.08
+
+Corrected missing EventDispatcher functions from base class
+iOS: Implemented autoreleasepools for all C function calls
+
+
 ###### 2014.12.03
 
 Updated to latest SDK
