@@ -34,7 +34,7 @@ package
 	 */
 	public class TestParse extends Sprite
 	{
-		public static const DEV_KEY 				: String = "your_dev_key";
+		public static const APP_KEY 				: String = "APPLICATION_KEY";
 		public static const PARSE_APPLICATION_ID 	: String = "";
 		public static const PARSE_CLIENT_KEY 		: String = "";
 		
@@ -42,11 +42,11 @@ package
 		/**
 		 * Class constructor 
 		 */	
-		public function TestParse( devKey:String = DEV_KEY, parseAppId:String = PARSE_APPLICATION_ID, parseClientKey:String = PARSE_CLIENT_KEY )
+		public function TestParse( appKey:String = APP_KEY, parseAppId:String = PARSE_APPLICATION_ID, parseClientKey:String = PARSE_CLIENT_KEY )
 		{
 			super();
 			
-			_devKey 		= devKey;
+			_appKey 		= appKey;
 			_parseAppId 	= parseAppId;
 			_parseClientKey = parseClientKey;
 			
@@ -59,7 +59,7 @@ package
 		//	VARIABLES
 		//
 		
-		protected var _devKey : String;
+		protected var _appKey : String;
 		protected var _parseAppId : String;
 		protected var _parseClientKey : String;
 		
@@ -94,7 +94,7 @@ package
 		{
 			try
 			{
-				Parse.init( _devKey );
+				Parse.init( _appKey );
 				
 				message( "Parse Supported: " + Parse.isSupported );
 				message( "Parse Version:   " + Parse.service.version );
