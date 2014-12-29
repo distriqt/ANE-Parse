@@ -1,5 +1,10 @@
 
 
+###### 2014.12.29
+
+iOS: Added latest SDK and created a 'no Bolts' version for usage with the FacebookAPI ANE
+
+
 ###### 2014.12.22
 
 iOS: Included arm64 support (resolves #1) 
