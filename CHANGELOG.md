@@ -1,5 +1,10 @@
 
 
+###### 2015.01.05
+
+iOS: Corrected missing getCurrentInstallation functionality
+
+
 ###### 2014.12.29
 
 iOS: Added latest SDK and created a 'no Bolts' version for usage with the FacebookAPI ANE
