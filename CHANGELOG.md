@@ -5,7 +5,6 @@
 Added check for .debug suffix in application id
 
 
-
 ###### 2015.01.05
 
 iOS: Corrected missing getCurrentInstallation functionality
