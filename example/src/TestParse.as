@@ -15,8 +15,10 @@
  */
 package
 {
+	import com.distriqt.extension.core.Core;
 	import com.distriqt.extension.parse.Parse;
 	import com.distriqt.extension.parse.events.ParseEvent;
+	import com.distriqt.extension.parse.push.Channel;
 	
 	import flash.display.Sprite;
 	import flash.display.StageAlign;
@@ -94,6 +96,7 @@ package
 		{
 			try
 			{
+				Core.init();
 				Parse.init( _appKey );
 				
 				message( "Parse Supported: " + Parse.isSupported );
@@ -181,15 +184,15 @@ package
 		{
 			message( event.type );
 			
-//			Parse.service.subscribe( new Channel( "test_1" ) );
-//			Parse.service.subscribe( new Channel( "test_2" ) );
-//			
-//			var subscriptions:Vector.<Channel> = Parse.service.getSubscriptions();
-//
-//			message( "============= SUBSCRIPTIONS ==================" );
-//			for each (var channel:Channel in subscriptions)
-//				message( "CHANNEL:: " + channel.name );
-//			message( "==============================================" );
+			Parse.service.subscribe( new Channel( "test_1" ) );
+			Parse.service.subscribe( new Channel( "test_2" ) );
+			
+			var subscriptions:Vector.<Channel> = Parse.service.getSubscriptions();
+
+			message( "============= SUBSCRIPTIONS ==================" );
+			for each (var channel:Channel in subscriptions)
+				message( "CHANNEL:: " + channel.name );
+			message( "==============================================" );
 			
 			
 //			Parse.service.unsubscribe( new Channel( "test_1" ));

@@ -1,5 +1,15 @@
 
 
+###### 2015.06.18
+
+Updated to Android v1.9.2 and iOS v1.7.4
+
+
+###### 2015.02.03
+
+Added check for .debug suffix in application id
+
+
 ###### 2015.02.03
 
 Added check for .debug suffix in application id
