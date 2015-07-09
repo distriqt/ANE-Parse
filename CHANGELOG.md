@@ -1,5 +1,10 @@
 
 
+###### 2015.07.10
+
+Release version for airnativeextensions
+
+
 ###### 2015.06.18
 
 Updated to Android v1.9.2 and iOS v1.7.4
