@@ -100,10 +100,12 @@ package
 				Parse.init( _appKey );
 				
 				message( "Parse Supported: " + Parse.isSupported );
-				message( "Parse Version:   " + Parse.service.version );
 
 				if (Parse.isSupported)
 				{
+					message( "Parse Version:   " + Parse.service.version );
+					message( "Parse Notifications Enabled:   " + Parse.service.notificationsEnabled() );
+					
 					Parse.service.addEventListener( ParseEvent.NOTIFICATION, parse_notificationHandler );
 					Parse.service.addEventListener( ParseEvent.FOREGROUND_NOTIFICATION, parse_notificationHandler );
 					Parse.service.addEventListener( ParseEvent.BACKGROUND_NOTIFICATION, parse_notificationHandler );
@@ -115,6 +117,7 @@ package
 					Parse.service.addEventListener( ParseEvent.ERROR, parse_errorHandler );
 					
 					Parse.service.setupApplication( _parseAppId, _parseClientKey );
+					
 				}
 				
 			}

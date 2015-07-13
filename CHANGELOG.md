@@ -1,5 +1,11 @@
 
 
+###### 2015.07.13
+
+Added direct call for register/notificationsEnabled to control when permission dialog appears 
+(resolves #2)
+
+
 ###### 2015.07.10
 
 Release version for airnativeextensions
