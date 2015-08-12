@@ -1,5 +1,10 @@
 
 
+###### 2015.08.12
+
+Updated build, default lib corrections
+
+
 ###### 2015.07.13
 
 Added direct call for register/notificationsEnabled to control when permission dialog appears 
