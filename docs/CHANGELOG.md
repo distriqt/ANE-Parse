@@ -1,5 +1,10 @@
 
 
+###### 2015.08.13
+
+iOS: Corrected push open functionality (resolves #6)
+
+
 ###### 2015.08.12
 
 Updated build, default lib corrections

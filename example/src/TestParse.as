@@ -187,8 +187,8 @@ package
 		{
 			message( event.type );
 			
-			Parse.service.subscribe( new Channel( "test_1" ) );
-			Parse.service.subscribe( new Channel( "test_2" ) );
+//			Parse.service.subscribe( new Channel( "test_1" ) );
+//			Parse.service.subscribe( new Channel( "test_2" ) );
 			
 			var subscriptions:Vector.<Channel> = Parse.service.getSubscriptions();
 
