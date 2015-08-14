@@ -1,5 +1,10 @@
 
 
+###### 2015.08.14
+
+iOS: Added the getDeviceToken function to retrieve the current device token (resolves #7)
+
+
 ###### 2015.08.13
 
 iOS: Corrected push open functionality (resolves #6)
