@@ -17,6 +17,7 @@ package
 {
 	import com.distriqt.extension.core.Core;
 	import com.distriqt.extension.parse.Parse;
+	import com.distriqt.extension.parse.ParseInstallation;
 	import com.distriqt.extension.parse.events.ParseEvent;
 	import com.distriqt.extension.parse.push.Channel;
 	
@@ -155,6 +156,12 @@ package
 			//
 			//	Do something when user clicks screen?
 			//	
+			
+			if (Parse.isSupported)
+			{
+				var installation:ParseInstallation = Parse.service.getCurrentInstallation();
+				message( "Installation ID: " + installation.installationId );
+			}
 		}
 		
 		private function activateHandler( event:Event ):void

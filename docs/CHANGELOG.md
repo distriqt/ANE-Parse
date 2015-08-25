@@ -1,5 +1,10 @@
 
 
+###### 2015.08.25
+
+Android: Updated Parse lib to version 1.10.1
+
+
 ###### 2015.08.14
 
 iOS: Added the getDeviceToken function to retrieve the current device token (resolves #7)
