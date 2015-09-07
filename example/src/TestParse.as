@@ -118,8 +118,8 @@ package
 					
 					Parse.service.addEventListener( ParseEvent.ERROR, parse_errorHandler );
 					
-					Parse.service.setupApplication( _parseAppId, _parseClientKey );
-					
+					Parse.service.setupApplication( _parseAppId, _parseClientKey, false );
+					Parse.service.register( false );
 				}
 				
 			}
