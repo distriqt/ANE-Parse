@@ -1,5 +1,10 @@
 
 
+###### 2015.09.07
+
+iOS: Corrected NOTIFICATION event not firing (resolves #10)
+
+
 ###### 2015.08.25
 
 Android: Updated Parse lib to version 1.10.1

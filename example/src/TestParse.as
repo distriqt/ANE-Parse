@@ -104,6 +104,7 @@ package
 
 				if (Parse.isSupported)
 				{
+					message( "Core Version:    " + Core.service.version );
 					message( "Parse Version:   " + Parse.service.version );
 					message( "Parse Notifications Enabled:   " + Parse.service.notificationsEnabled() );
 					
