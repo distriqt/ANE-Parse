@@ -1,5 +1,10 @@
 
 
+###### 2015.09.10
+
+iOS: Fixed issue with analytics when starting from a notification when closed (#9)
+
+
 ###### 2015.09.08
 
 iOS: Added option to disable the default Parse notification handler (resolves #9)
