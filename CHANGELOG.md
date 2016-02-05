@@ -1,5 +1,11 @@
 
 
+###### 2016.02.05
+
+Added put, get, and saveInBackground on current installation (resolves #12)
+Updated SDK - iOS: v1.12.0 Android: v1.13.0 (#17)
+
+
 ###### 2015.09.10
 
 iOS: Fixed issue with analytics when starting from a notification when closed (#9)

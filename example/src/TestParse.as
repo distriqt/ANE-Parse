@@ -19,6 +19,7 @@ package
 	import com.distriqt.extension.parse.Parse;
 	import com.distriqt.extension.parse.ParseInstallation;
 	import com.distriqt.extension.parse.events.ParseEvent;
+	import com.distriqt.extension.parse.events.ParseObjectEvent;
 	import com.distriqt.extension.parse.push.Channel;
 	
 	import flash.display.Sprite;
@@ -162,6 +163,10 @@ package
 			{
 				var installation:ParseInstallation = Parse.service.getCurrentInstallation();
 				message( "Installation ID: " + installation.installationId );
+				message( "Installation.alias: " + installation.getString( "alias" ) );
+				
+				installation.putString( "alias", "dsqt" );
+				installation.saveInBackground();
 			}
 		}
 		
@@ -207,6 +212,9 @@ package
 			
 			
 //			Parse.service.unsubscribe( new Channel( "test_1" ));
+			
+			
+			Parse.service.getCurrentInstallation().addEventListener( ParseObjectEvent.SAVEINBACKGROUND_COMPLETE, installation_saveInBackgroundHandler, false, 0, true );
 		}
 		
 		
@@ -215,6 +223,11 @@ package
 			message( "ERROR:: " + event.data );
 		}
 		
+		
+		private function installation_saveInBackgroundHandler( event:ParseObjectEvent ):void
+		{
+			message( "installation_saveInBackgroundHandler" );
+		}
 
 		
 	}
