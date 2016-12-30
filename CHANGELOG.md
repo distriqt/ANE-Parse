@@ -1,5 +1,10 @@
 
 
+###### 2016.12.30 [v3.0.005]
+
+Updated SDKs + new documentation
+
+
 ###### 2016.02.05
 
 Added put, get, and saveInBackground on current installation (resolves #12)

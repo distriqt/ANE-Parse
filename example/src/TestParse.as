@@ -33,26 +33,20 @@ package
 	
 	/**	
 	 * Sample application for using the Parse Native Extension
-	 * 
-	 * @author	Michael Archbold
 	 */
 	public class TestParse extends Sprite
 	{
-		public static const APP_KEY 				: String = "APPLICATION_KEY";
-		public static const PARSE_APPLICATION_ID 	: String = "";
-		public static const PARSE_CLIENT_KEY 		: String = "";
+		public static var APP_KEY 				: String = "APPLICATION_KEY";
+		public static var PARSE_APPLICATION_ID 	: String = "";
+		public static var PARSE_CLIENT_KEY 		: String = "";
 		
 		
 		/**
 		 * Class constructor 
 		 */	
-		public function TestParse( appKey:String = APP_KEY, parseAppId:String = PARSE_APPLICATION_ID, parseClientKey:String = PARSE_CLIENT_KEY )
+		public function TestParse()
 		{
 			super();
-			
-			_appKey 		= appKey;
-			_parseAppId 	= parseAppId;
-			_parseClientKey = parseClientKey;
 			
 			create();
 			init();
@@ -62,10 +56,6 @@ package
 		//
 		//	VARIABLES
 		//
-		
-		protected var _appKey : String;
-		protected var _parseAppId : String;
-		protected var _parseClientKey : String;
 		
 		private var _text		: TextField;
 		
@@ -79,11 +69,8 @@ package
 			stage.align = StageAlign.TOP_LEFT;
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			
-
-			var tf:TextFormat = new TextFormat();
-			tf.size = 24;
 			_text = new TextField();
-			_text.defaultTextFormat = tf;
+			_text.defaultTextFormat = new TextFormat( "_typewriter", 18 );
 			addChild( _text );
 
 			stage.addEventListener( Event.RESIZE, stage_resizeHandler, false, 0, true );
@@ -99,7 +86,7 @@ package
 			try
 			{
 				Core.init();
-				Parse.init( _appKey );
+				Parse.init( APP_KEY );
 				
 				message( "Parse Supported: " + Parse.isSupported );
 
@@ -119,7 +106,7 @@ package
 					
 					Parse.service.addEventListener( ParseEvent.ERROR, parse_errorHandler );
 					
-					Parse.service.setupApplication( _parseAppId, _parseClientKey, false );
+					Parse.service.setupApplication( PARSE_APPLICATION_ID, PARSE_CLIENT_KEY, false );
 					Parse.service.register( false );
 				}
 				
